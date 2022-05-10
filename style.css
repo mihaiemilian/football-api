@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #010a0f;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Navgination bar */
+
+.container-fluid {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #001e28;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  padding: 2rem 0rem 0rem 0rem;
+  margin: 0rem 1rem 1rem 1rem;
+}
+
+.navbar .nav-button {
+  display: none;
+}
+
+.navbar .login-button {
+  display: none;
+}
+
+.login-box {
+  padding: 24px 24px;
+}
+
+.login-button {
+  color: white;
+  background-color: #0f2d37;
+  padding: 12px 12px;
+  border: none;
+}
+
+.login-button:hover {
+  background-color: #9c9db2;
+}
+
+.nav-button {
+  color: white;
+  background-color: #24248f;
+  border-radius: 50px;
+  padding: 24px 24px;
+  border: none;
+  box-shadow: 8px 10px 11px -7px #333334;
+}
+
+.nav-button:hover {
+  background-color: #4c53b1;
+  box-shadow: 0px 4px 16px rgba(16, 36, 106, 0.25);
+}
+
+.nav-button:active {
+  background-color: #10246a;
+  color: white;
+  border: 3px solid #70a6f7;
+}
+
+.mobile-bars {
+  padding: 30px 30px 0 0;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.search-wrapper {
+  margin-right: 50px;
+  color: white;
+}
+
+input {
+  font-size: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.back-button {
+  color: white;
+  background-color: #003e5a;
+  margin-left: 100px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.back-button:hover {
+  background-color: #4775a0;
+  border: 1px solid white;
+}
+
+/* Login form */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  z-index: 10;
+  min-width: 20%;
+  min-height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.login-form {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+.modal-title {
+  padding: 10px 0px 30px 0px;
+  display: flex;
+}
+
+.modal-title h3 {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 26px;
+  color: #404040;
+}
+
+.close-modal {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.inputs {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.input {
+  position: relative;
+  margin-bottom: 20px;
+  height: 40px;
+  display: flex;
+}
+
+.input input {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 0px 15px 0px 15px;
+  font-size: 15px;
+  color: #404040;
+}
+
+.modal-button {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #001e28;
+  color: white;
+  font-size: 20px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Main content */
+
+.container {
+  max-width: 1200px;
+  background-color: #00141e;
+  margin: 100px auto;
+  color: white;
+  padding: 10px;
+}
+
+/* Recent matches */
+
+.league-title {
+  background-color: #0f2d37;
+  margin: 20px;
+  padding: 10px;
+}
+
+.matches {
+  background-color: #00141e;
+  padding: 10px;
+  margin: 10px;
+}
+
+.match-section {
+  border-bottom: 3px solid grey;
+}
+
+.match-team {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.team-logo {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.team-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.team-name {
+  width: calc(100% - 100px);
+}
+
+/* Team showcase */
+
+.english-teams,
+.spanish-teams,
+.romanian-teams {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.single-team-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #010a0f;
+  border: 1px solid rgb(0, 0, 0);
+  width: 200px;
+  height: 220px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+
+.single-team-emblem {
+  padding-left: 25px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.single-team-name {
+  padding-left: 30px;
+}
+
+.single-team-city {
+  padding-left: 30px;
+  margin-top: 5px;
+}
+
+.single-team-box:hover {
+  background-color: #10246a;
+}
+
+.team-link {
+  cursor: default;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-top: 1px solid #9c9db2;
+  background-color: #001e28;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.footer-list li {
+  margin-bottom: 0.5rem;
+}
+
+.contact {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contact-text {
+  color: white;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 730px) {
+  /* Navigation Bar */
+
+  .mobile-bars {
+    display: none;
+  }
+
+  .navbar .nav-button {
+    display: block;
+  }
+
+  .navbar .login-button {
+    display: block;
+  }
+
+  /* Footer */
+
+  .footer {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  .footer-list ul {
+    margin-right: 50px;
+  }
+
+  .icons a {
+    margin-right: 30px;
+    padding-top: 10px;
+  }
+}

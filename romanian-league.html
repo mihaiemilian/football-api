@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romanian League</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="container-fluid">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <a href="premier-league.html" class="nav-button" id="english">Premier League</a>
+            <a href="spanish-league.html" class="nav-button" id="spanish">Spanish La Liga</a>
+            <a href="romanian-league.html" class="nav-button" id="romanian">Liga 1</a>
+            <div class="login-box">
+                <a href="" class="login-button">Login</a>
+            </div>
+            <a href="#" class="mobile-bars"><i class="fas fa-bars fa-lg"></i></a>
+        </div>
+    </div>
+
+    <!-- Login form -->
+    <div class="modal" id="modal">
+        <form class="login-form" id="form">
+            <div class="modal-body">
+                <div class="modal-title">
+                    <h3>User Login</h3>
+                    <button data-close-button class="close-modal">&times</button>
+                </div>
+                <div class="inputs">
+                    <div class="input">
+                        <input id="name" name="name" type="text" placeholder="Username">
+                    </div>
+                    <div class="input">
+                        <input id="password" name="password" type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" class="modal-button" value="Login">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="overlay"></div>
+
+    <!-- All teams -->
+    <div class="header">
+        <a href="recent-matches.html" class="back-button">Back to Recent Matches</a>
+
+        <div class="search-wrapper">
+            <label for="search">Search Teams: </label>
+            <input type="search" id="search" data-search>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Romanian Liga 1 Teams</h1>
+        <div class="romanian-teams"></div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="footer-list">
+            <ul>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Mobile App</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">LiveScore</a></li>
+                <li><a href="#">Recommended Websites</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-list">
+            <div class="contact">
+                <p class="contact-text">Follow Us</p>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+    <script src="leagues.js"></script>
+    <script src="login-form.js"></script>
+</html>
